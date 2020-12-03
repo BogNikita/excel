@@ -9,9 +9,11 @@
         "arrow-parens": "off",
         "comma-dangle": "off",
         "linebreak-style": "off",
-        "require-jsdoc": "off"
+        "require-jsdoc": "off",
+        "operator-linebreak": "off"
     },
     "extends": [
-        "eslint:recommended", "google"
+        "eslint:recommended",
+        "google"
     ]
 }
