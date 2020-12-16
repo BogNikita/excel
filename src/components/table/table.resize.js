@@ -22,29 +22,29 @@ export function resizeHandler($root, event) {
         value = coords.height + delta;
         $resizer.css({bottom: -delta +'px'});
       }
-      document.onmouseup = () => {
-        document.onmousemove = null;
-        document.onmouseup = null;
-        if (type === 'col') {
-          $parent.css({
-            width: value + 'px'
-          });
-          arrayCol.forEach(item => item.style.width = value +'px');
-        } else {
-          $parent.css({height: value + 'px'});
-        }
+    };
+    document.onmouseup = () => {
+      document.onmousemove = null;
+      document.onmouseup = null;
+      if (type === 'col') {
+        $parent.css({
+          width: value + 'px'
+        });
+        arrayCol.forEach(item => item.style.width = value +'px');
+      } else {
+        $parent.css({height: value + 'px'});
+      }
 
-        resolve({
-          type,
-          value,
-          id: $parent.data[type]
-        });
-        $resizer.css({
-          opacity: 0,
-          bottom: 0,
-          right: 0
-        });
-      };
+      resolve({
+        type,
+        value,
+        id: $parent.data[type]
+      });
+      $resizer.css({
+        opacity: 0,
+        bottom: 0,
+        right: 0
+      });
     };
   });
 }
