@@ -6,8 +6,8 @@ import {isCell, matrix, shouldResize, nextSelector} from './table.function';
 import {TableSelection} from './TableSelection';
 import {$} from '@/core/dom';
 import * as actions from '@/redux/actions';
-import {defaultStyles} from '../../constans';
-import {parse} from '../../core/parse';
+import {defaultStyles} from '@/constans';
+import {parse} from '@core/parse';
 export class Table extends ExcelComponent {
   static className = 'excel__table';
   constructor($root, options) {
